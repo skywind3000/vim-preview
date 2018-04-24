@@ -136,7 +136,7 @@ Function signature is displayed at the bottom including file name and line numbe
 
 Calling `PreviewSignature` without any argument will use the current word under cursor as the function name and `PreviewSignature!` will find a function name closest to the cursor position.
 
-The bang sign is very use, think that:
+The bang sign is very useful, think that:
 
 ```text
 printf(<cursor position>
