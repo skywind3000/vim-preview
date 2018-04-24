@@ -54,7 +54,7 @@ Previously, when we got multiple matches, `CTRL+]` or `CTRL+W }` will display a 
 
 And you have to choose one of them, this is very annoying and disturbing when you are focusing on editing or navigating the sources.
 
-You don't need care about this anymore when you use `:PreviewTag` with a new tag name, the first match will be displayed in the preview window, execute `:PreviewTag` with the same tag name again, the next match will be used. If there is no more result, the first one is used again.
+You don't need to care about this anymore when you use `:PreviewTag` with a new tag name, the first match will be displayed in the preview window, execute `:PreviewTag` with the same tag name again, the next match will be used. If there is no more result, the first one is used again.
 
 When you get multiple matches, the current match will be displayed in the command line. `(1/2)` represents there are two tags matched and this is the first one. Assume that you bind `:PreviewTag` to `F3`, all your need is move the cursor on an identifier and repeatly press `F3`, and all the matches will be displayed on the right preview window circularly.
 
@@ -82,7 +82,7 @@ Open arbitrary file in the preview window:
 PreviewFile [++opt] [+cmd] filename
 ```
 
-Just like `PreviewTag` but preview a given file, the `+cmd` could be any vim command which will be executed after opening the file. for example:
+Just like `PreviewTag` but preview a given file, the `+cmd` could be any vim command which will be executed after opening the file. For example:
 
 ```VimL
 PreviewFile +:10 ~/.vimrc
@@ -134,7 +134,7 @@ If the `function name` is not provided, current word under cursor will be taken 
 
 Function signature is displayed at the bottom including file name and line number. Execute `PreviewSignature` again, the next signature will be displayed if there are multiple matches, just like `PreviewTag`.
 
-Calling `PreviewSignature` without any argument will use the current word under cursor as the function name and `PreviewSignature!` will find a function name closest to the cursor position position. 
+Calling `PreviewSignature` without any argument will use the current word under cursor as the function name and `PreviewSignature!` will find a function name closest to the cursor position.
 
 The bang sign is very use, think that:
 
@@ -142,7 +142,7 @@ The bang sign is very use, think that:
 printf(<cursor position>
 ```
 
-When you input `printf(` and you can't remember the parameters, you can execute `PreviewSignature!` directly in the insert mode. the cursor is on the right side of left paren the function name `printf` is on the left side, but with the bang sign, function name `printf` can be find out because it is the nearest function name to the cursor position.
+When you input `printf(` and you can't remember the parameters, you can execute `PreviewSignature!` directly in the insert mode. The cursor is on the right side of left paren the function name `printf` is on the left side, but with the bang sign, function name `printf` can be find out because it is the nearest function name to the cursor position.
 
 Now we have the below setting:
 
@@ -166,6 +166,6 @@ ctags --fields=+nS
 
 `n` will tell ctags add a `line number` filed in each tag record and `S` means including function signatures.
 
-`vim-preview` can work fine without these two fileds but it can't tell you line number in the command line and it will guess the function signature which may get a incorrect result sometimes. 
+`vim-preview` can work fine without these two fields but it can't tell you line number in the command line and it will guess the function signature which may get an incorrect result sometimes. 
 
 Don't generate tags file manually, use some tags manager like [gutentags](https://github.com/ludovicchabant/vim-gutentags), [easytags](https://github.com/xolox/vim-easytags) and [gen_tags](https://github.com/jsfaint/gen_tags.vim). They will take good care of your tags files.
