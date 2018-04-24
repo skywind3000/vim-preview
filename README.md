@@ -58,7 +58,7 @@ You don't need to care about this anymore when you use `:PreviewTag` with a new 
 
 When you get multiple matches, the current match will be displayed in the command line. `(1/2)` represents there are two tags matched and this is the first one. Assume that you bind `:PreviewTag` to `F3`, all your need is move the cursor on an identifier and repeatly press `F3`, and all the matches will be displayed on the right preview window circularly.
 
-In the past, scroll the preview window may involve mode change and window switching. If the preview window is not height enough to view the whole function implementation, you must jump to the preview window press CTRL+F to scroll down then jump back. Leaving and Re-entering insert mode may also be required.
+In the past, scrolling the preview window may involve mode change and window switching. If the preview window is not height enough to view the whole function implementation, you must jump to the preview window press CTRL+F to scroll down then jump back. Leaving and Re-entering insert mode may also be required.
 
 ```VimL
 noremap <m-u> :PreviewScroll -1<cr>
