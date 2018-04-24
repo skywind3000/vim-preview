@@ -54,7 +54,7 @@ Previously, when we got multiple matches, `CTRL+]` or `CTRL+W }` will display a 
 
 And you have to choose one of them, this is very annoying and disturbing when you are focusing on editing or navigating the sources.
 
-You don't need care this anymore when you use `:PreviewTag` with a new tag name, the first match will be displayed in the preview window, execute `:PreviewTag` with the same tag name again, the next match will be used. If there is no more result, the first one is used again.
+You don't need care about this anymore when you use `:PreviewTag` with a new tag name, the first match will be displayed in the preview window, execute `:PreviewTag` with the same tag name again, the next match will be used. If there is no more result, the first one is used again.
 
 When you get multiple matches, the current match will be displayed in the command line. `(1/2)` represents there are two tags matched and this is the first one. Assume that you bind `:PreviewTag` to `F3`, all your need is move the cursor on an identifier and repeatly press `F3`, and all the matches will be displayed on the right preview window circularly.
 
