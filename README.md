@@ -72,8 +72,6 @@ With the keymaps above, you can use `<m-u>` and `<m-d>` directly to scroll previ
 When you are done, press `CTRL+w z` to close the preview window or `:PreviewGoto` to open the previewing file and location in a non-preview window.
 
 
-
-
 ## PreviewFile
 
 Open arbitrary file in the preview window:
@@ -168,4 +166,14 @@ ctags --fields=+nS
 
 `vim-preview` can work fine without these two fields but it can't tell you line number in the command line and it will guess the function signature which may get an incorrect result sometimes. 
 
+# Hints
+
 Don't generate tags file manually, use some tags manager like [gutentags](https://github.com/ludovicchabant/vim-gutentags), [easytags](https://github.com/xolox/vim-easytags) and [gen_tags](https://github.com/jsfaint/gen_tags.vim). They will take good care of your tags files.
+
+When you are using Language Servers with [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim), You can use `PreviewFile` to preview definition instead of  jump to it:
+
+```VimL
+call LanguageClient#textDocument_definition({'gotoCmd':'PreviewFile'})
+```
+
+Your current buffer will not be switched away, and just close the preview window by `CTRL+W z` when you are done.
