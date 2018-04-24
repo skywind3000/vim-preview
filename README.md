@@ -168,7 +168,7 @@ ctags --fields=+nS
 
 # Tips
 
-Don't generate tags file manually, use some tags manager like [gutentags](https://github.com/ludovicchabant/vim-gutentags), [easytags](https://github.com/xolox/vim-easytags) and [gen_tags](https://github.com/jsfaint/gen_tags.vim). They will take good care of your tags files.
+Don't generate tags file manually, use some tags manager like [gutentags](https://github.com/ludovicchabant/vim-gutentags) and [gen_tags](https://github.com/jsfaint/gen_tags.vim). They will take good care of your tags files.
 
 When you are using Language Servers with [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim), You can use `PreviewFile` to preview definition instead of  jump to it:
 
