@@ -132,7 +132,7 @@ The `[linenr]` parameter is the line number in the quickfix window. The current 
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 ```
 
-Keymaps could be setup for convenience.
+We can have the above keymap for convenience.
 
 ![](doc/preview-quickfix.png)
 
