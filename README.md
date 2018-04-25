@@ -20,6 +20,7 @@ Plug 'skywind3000/vim-preview'
 | PreviewClose | `N/A` | Close the preview window |
 | PreviewGoto | `command` | Open the previewing file in a non-preview window |
 | PreviewScroll | `offset` | Scroll preview window without leaving current window or inser mode |
+| PreviewQuickfix | `[linenr]` | Preview file in quickfix list |
 | PreviewSignature | `[function name]` | Preview the function signature circularly in the command line |
 
 
@@ -115,6 +116,17 @@ Close the preview window
 PreviewClose
 ```
 A command version of `CTRL+W z`.
+
+
+## PreviewQuickfix
+
+This command can preview files listed in quickfix window without opening it directly.
+
+```VimL
+PreviewQuickfix [linenr]
+```
+
+The `[linenr]` parameter is the line number in the quickfix window. The current line number in the quickfix window will be taken if it is not provided.
 
 
 ## PreviewSignature
