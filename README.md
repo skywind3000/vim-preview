@@ -130,6 +130,7 @@ The `[linenr]` parameter is the line number in the quickfix window. The current 
 
 ```VimL
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 ```
 
 We can have the above keymap in quickfix window for convenience.
@@ -138,7 +139,7 @@ We can have the above keymap in quickfix window for convenience.
 
 Now we switch to quickfix window and press p, the item under cursor will be displayed in the preview window immediately, then move around the cursor choose another item and press p again, all files is displayed in the same preview window.
 
-It will not open new split or switch away your current buffer no matter what `switchbuf` is. When you finished, just use `CTRL+W z` to close the preview window.
+It will not open new split or switch away your current buffer no matter what `switchbuf` is. When you finished, just use `P` (upper case) or `CTRL+W z` to close the preview window.
 
 
 ## PreviewSignature
