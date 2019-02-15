@@ -56,7 +56,7 @@ command! -nargs=? PreviewTag call s:PreviewTag(<f-args>)
 " preview signature
 "----------------------------------------------------------------------
 function! s:PreviewSignature(bang, ...)
-	let funcname = (a:0 > 0)? a:1 : expand('<cword>')
+	let funcname = (a:0 > 0)? a:1 : ""
 	if a:bang 
 		let funcname = '<?>'
 	endif
@@ -64,6 +64,21 @@ function! s:PreviewSignature(bang, ...)
 endfunc
 
 command! -nargs=? -bang PreviewSignature call s:PreviewSignature(<bang>0, <f-args>)
+
+
+"----------------------------------------------------------------------
+" preview tags in quickfix 
+"----------------------------------------------------------------------
+function! s:PreviewList(bang, ...)
+	let name = (a:0 > 0)? a:1 : expand('<cword>')
+	let size = preview#quickfix_list(name, a:bang, &filetype)
+	if size > 0
+		redraw | echo "" | redraw
+		echo "PreviewList: ". size . " tags listed."
+	endif
+endfunc
+
+command! -nargs=? -bang PreviewList call s:PreviewList(<bang>0, <f-args>)
 
 
 "----------------------------------------------------------------------
@@ -84,7 +99,7 @@ command! -nargs=1 -bang PreviewScroll call s:PreviewScroll(<bang>0, <f-args>)
 "----------------------------------------------------------------------
 " goto the preview window
 "----------------------------------------------------------------------
-command! -nargs=1 PreviewGoto call preview#preview_goto(<f-args>)
+command! -nargs=1 PreviewGoto call preview#preview_goto(<q-args>)
 
 
 "----------------------------------------------------------------------
