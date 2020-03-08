@@ -2,6 +2,10 @@
 
 This plugin solves a series of user experience problems in vim's preview window and provide a handy way to preview tags, files and function signatures.
 
+**Note**: Active development on this plugin has stopped. The only future changes will be bug fixes.
+
+Please see [vim-quickui](https://github.com/skywind3000/vim-quickui).
+
 # Installation
 
 ```VimL
